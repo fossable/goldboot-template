@@ -1,0 +1,28 @@
+{
+  "alloy": [
+    {
+      "fabricators": null,
+      "mold": {
+        "ArchLinux": {
+          "hostname": "ArchLinux",
+          "mirrorlist": null,
+          "packages": null,
+          "root_password": {
+            "plaintext": "root"
+          }
+        }
+      },
+      "pref_size": null,
+      "source": {
+        "Iso": {
+          "url": "https://mirrors.kernel.org/archlinux/iso/2024.01.01/archlinux-2024.01.01-x86_64.iso"
+        }
+      }
+    }
+  ],
+  "arch": "Amd64",
+  "debug": false,
+  "name": "Example Arch Linux",
+  "record": false,
+  "size": "4G"
+}

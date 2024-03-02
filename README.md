@@ -1,0 +1,2 @@
+## goldboot template
+
