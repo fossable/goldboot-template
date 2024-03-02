@@ -3,18 +3,22 @@ on:
   push:
     branches: [master]
 
-steps:
-  - name: Checkout
-    uses: actions/checkout@v4
+jobs:
+  build-linux:
+    name: Build / ${RUNNER_OS} (${RUNNER_ARCH})
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-  - name: Build goldboot image
-    uses: fossable/goldboot-action@master
-    with:
-      config-path: goldboot.json
-      output-path: image.gb
+      - name: Build goldboot image
+        uses: fossable/goldboot-action@master
+        with:
+          config-path: goldboot.json
+          output-path: image.gb
 
-  - name: Save image artifact
-    uses: actions/upload-artifact@v3
-    with:
-      name: my_image.gb
-      path: image.gb
+      - name: Save image artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my_image.gb
+          path: image.gb
